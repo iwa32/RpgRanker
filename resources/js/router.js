@@ -1,3 +1,8 @@
+//環境によってページのプレフィックスを変更する。
+import {
+    API_PREFIX
+} from './util.js'
+
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import BodyClass from 'vue-body-class'
@@ -20,89 +25,94 @@ import NotFound from './components/organisms/errors/NotFound.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    //トップページ
-    path: '/',
-    components: {
-      contents: TopContainer
-    }
-  },
-  {
-    //システムエラー
-    path: '/500',
-    components: {
-      contents: SystemError
-    }
-  },
-  {
-    //ページが存在しない時
-    path: '*',
-    components: {
-      contents: NotFound
-    }
-  },
-  {
-    //共通ページ
-    path: '/game/',
-    meta: { bodyClass: 'page-common' },
-    components: {
-      header: CommonHeader,
-      contents: CommonContainer,
-      footer: CommonFooter
+    {
+        //トップページ
+        path: '/',
+        components: {
+            contents: TopContainer
+        }
     },
-    children: [
-      {
-        path: 'character-selection',
+    {
+        //システムエラー
+        path: '/500',
         components: {
-          section: CharacterSelection
+            contents: SystemError
         }
-      },
-      {
-        path: 'battle/:characterId',
+    },
+    {
+        //共通ページ
+        path: '/game/',
+        meta: {
+            bodyClass: 'page-common'
+        },
         components: {
-          section: BattleArea
-        }
-      },
-      {
-        path: 'battle-result',
+            header: CommonHeader,
+            contents: CommonContainer,
+            footer: CommonFooter
+        },
+        children: [{
+                path: 'character-selection',
+                components: {
+                    section: CharacterSelection
+                }
+            },
+            {
+                path: 'battle/:characterId',
+                components: {
+                    section: BattleArea
+                }
+            },
+            {
+                path: 'battle-result',
+                components: {
+                    section: BattleResult
+                }
+            },
+            {
+                path: 'bbs',
+                components: {
+                    section: BbsArea
+                }
+            },
+            {
+                path: 'ranking',
+                components: {
+                    section: RankingArea
+                }
+            },
+            {
+                path: 'login-register',
+                components: {
+                    section: LoginRegister
+                }
+            },
+            {
+                path: 'thanks',
+                components: {
+                    section: ThanksArea
+                }
+            }
+        ]
+    },
+    {
+        //ページが存在しない時
+        path: '/*',
         components: {
-          section: BattleResult
+            contents: NotFound
         }
-      },
-      {
-        path: 'bbs',
-        components: {
-          section: BbsArea
-        }
-      },
-      {
-        path: 'ranking',
-        components: {
-          section: RankingArea
-        }
-      },
-      {
-        path: 'login-register',
-        components: {
-          section: LoginRegister
-        }
-      },
-      {
-        path: 'thanks',
-        components: {
-          section: ThanksArea
-        }
-      }
-    ]
-  }
+    }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
-  scrollBehavior () {
-    return { x: 0, y: 0 }
-  },
-  routes
+    mode: 'history',
+    base: API_PREFIX,
+    scrollBehavior() {
+        return {
+            x: 0,
+            y: 0
+        }
+    },
+    routes
 })
 Vue.use(BodyClass, router)
 

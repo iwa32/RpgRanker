@@ -27,3 +27,8 @@
  export const INTERNAL_SERVER_ERROR = 500
  export const UNPROCESSABLE_ENTITY = 422
  export const NOT_FOUND = 404
+
+ /**
+  * 環境によってページのプレフィックスを変更する。
+  */
+ export const API_PREFIX = process.env.MIX_VUE_APP_API_URL || '';
