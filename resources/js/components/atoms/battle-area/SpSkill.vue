@@ -3,7 +3,7 @@
     v-if="hasSpSkill"
     @click="useSpSkill(characterSpSkill[0].name, characterSpSkill[0].power, characterSpSkill[0].attribute)"
   >
-    <img src="../../../../images/sp-skill-active.png" alt="必殺技発動">
+    <img src="/PrivateProducts/RpgRanker/images/sp-skill-active.png" alt="必殺技発動">
   </p>
 </template>
 

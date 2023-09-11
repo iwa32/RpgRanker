@@ -24,7 +24,7 @@ export default {
 <style lang="scss" scoped>
 @import '../../../../sass/app.scss';
 .top-container {
-  background: url('../../../../images/top-bg.png') no-repeat center center;
+  background: url('/PrivateProducts/RpgRanker/images/top-bg.png') no-repeat center center;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

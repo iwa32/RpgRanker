@@ -1,7 +1,7 @@
 <template>
   <p class="character-icon">
     <img 
-      :src="'../../../../images/' + characterList[characterIndex].pass + '_big.png'" 
+      :src="'/PrivateProducts/RpgRanker/images/' + characterList[characterIndex].pass + '_big.png'" 
       :alt="characterList[characterIndex].name + 'の拡大したアイコン'"
     >
   </p>

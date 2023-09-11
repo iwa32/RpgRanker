@@ -1,7 +1,7 @@
 <template>
   <p class="character-icon">
     <img
-      :src="'../../../../images/' + characterPass + '.png'"
+      :src="'/PrivateProducts/RpgRanker/images/' + characterPass + '.png'"
       :alt="characterName"
     >
   </p>

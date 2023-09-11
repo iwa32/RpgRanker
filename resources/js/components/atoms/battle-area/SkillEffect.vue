@@ -1,7 +1,7 @@
 <template>
   <p class="skill-effect">
     <img 
-      :src="'../../../../images/' + skillEffectAttribute + '.gif'" 
+      :src="'/PrivateProducts/RpgRanker/images/' + skillEffectAttribute + '.gif'" 
       alt="スキルのエフェクト"
     >
   </p>

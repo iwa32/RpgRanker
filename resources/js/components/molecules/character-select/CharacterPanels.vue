@@ -4,7 +4,7 @@
       v-for="character in characterDisplayNumber"
       :key="character.id"
       :class-name="{ 'active': character.id === characterId }"
-      :img-pass="'../../../images/' + character.pass + '.png'"
+      :img-pass="'/PrivateProducts/RpgRanker/images/' + character.pass + '.png'"
       :alt-name="character.name"
       :character-id="character.id"
     ></character-panel>

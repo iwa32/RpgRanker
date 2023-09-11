@@ -7,7 +7,7 @@
 
     <p class="character-icon">
       <img 
-        :src="'../../../../images/' + characterPass + '.png'" 
+        :src="'/PrivateProducts/RpgRanker/images/' + characterPass + '.png'" 
         :alt="characterName + 'のアイコン'">
     </p>
 
@@ -85,13 +85,13 @@ export default {
     height: 30px;
     width: 9%;
     &.rank1 {
-      background: url('../../../../images/rank_gold.png') no-repeat center center/cover;
+      background: url('/PrivateProducts/RpgRanker/images/rank_gold.png') no-repeat center center/cover;
     }
     &.rank2 {
-      background: url('../../../../images/rank_silver.png') no-repeat center center/cover;
+      background: url('/PrivateProducts/RpgRanker/images/rank_silver.png') no-repeat center center/cover;
     }
     &.rank3 {
-      background: url('../../../../images/rank_bronze.png') no-repeat center center/cover;
+      background: url('/PrivateProducts/RpgRanker/images/rank_bronze.png') no-repeat center center/cover;
     }
     @include tab {
       font-size: 1.8rem;

@@ -37,7 +37,7 @@ export default {
   text-shadow: 2px 1px 1px $text-color;
   letter-spacing: .08em;
   &:before {
-    background: url('../../../../images/heart-icon.png') no-repeat center center/contain;
+    background: url('/PrivateProducts/RpgRanker/images/heart-icon.png') no-repeat center center/contain;
     content: '';
     display: block;
     position: absolute;

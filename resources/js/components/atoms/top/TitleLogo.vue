@@ -1,6 +1,6 @@
 <template>
   <h1 class="top-title">
-    <img src="/images/top-logo.png" alt="RpgRankerのロゴ">
+    <img src="/PrivateProducts/RpgRanker/images/top-logo.png" alt="RpgRankerのロゴ">
   </h1>
 </template>
 
