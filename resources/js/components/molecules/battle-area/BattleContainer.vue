@@ -1,6 +1,6 @@
 <template>
   <div class="battle-container"
-    :style="`background: url('../../../images/${battleMonsterData.field}.jpg') no-repeat center center/cover;`"
+    :style="`background: url('/images/${battleMonsterData.field}.jpg') no-repeat center center/cover;`"
   >
     <battle-monster></battle-monster>
 

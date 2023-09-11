@@ -2,7 +2,7 @@
   <p class="battle-monster">
     <img
       :class="{ 'battle-monster__motion': monsterMotion } "
-      :src="'../../../images/' + battleMonsterData.pass + '.png'"
+      :src="'/images/' + battleMonsterData.pass + '.png'"
       :alt="battleMonsterData.name"
     >
   </p>
