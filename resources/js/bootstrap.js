@@ -19,7 +19,7 @@ try {
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-import { getCookie } from './util.js'
+import { API_PREFIX, getCookie } from './util.js'
 
 window.axios = require('axios');
 
@@ -36,6 +36,9 @@ window.axios.interceptors.response.use(
   response => response,
   error => error.response || error
 )
+
+axios.defaults.baseURL = '/' + API_PREFIX
+
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
