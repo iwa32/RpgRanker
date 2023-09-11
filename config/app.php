@@ -123,6 +123,11 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+    /**
+     * baseURL
+     */
+    'baseApiURL' => env('MIX_VUE_APP_API_URL', ''),
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
@@ -228,5 +233,4 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'BattleService' => App\Facades\BattleService::class
     ],
-
 ];
